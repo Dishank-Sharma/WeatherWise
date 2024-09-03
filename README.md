@@ -32,7 +32,7 @@ To use or modify the project, clone the repository and open the `index.html` fil
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Acknowledgements
 
