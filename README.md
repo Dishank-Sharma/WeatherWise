@@ -1,6 +1,7 @@
 # WeatherWise
 
-![WeatherWise](https://weather-wise-w.netlify.app/)
+![WeatherWise](https://github.com/user-attachments/assets/0f44f728-9a71-465e-a090-456085defae0)
+
 
 WeatherWise is a dynamic weather application built with HTML, CSS, and JavaScript. It utilizes the OpenWeather API to provide real-time weather updates for any city you search. The app also features GPS-based location detection, allowing it to automatically fetch and display the weather for your current location.
 
