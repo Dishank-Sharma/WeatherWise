@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        - primary meta tag
+    -->
+    <title>Weather Wise</title>
+    <meta name="title" content="Weather Forecast">
+    <meta name="description" content="Weather Forecast app made by Dishank Sharma">
+
+    <!-- 
+        - favricon
+    -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- 
+        - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- 
+        - font awesome css file
+    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <!-- 
+        - css file
+    -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body>
+    <main>
+        <!-- 
+            - Starter Screen
+        -->
+
+        <div id="starter_page">
+            <i class="fa-solid fa-arrow-up"></i>
+            <span>Search Your City</span>
+            <i class="fa-solid fa-face-smile-beam"></i>
+        </div>
+
+        <!-- 
+            - header
+        -->
+        <header>
+            <div id="location">
+                <Span class="city">London, UK</Span>
+                <span class="date">Sunday 4th August</span>
+            </div>
+            <div id="searchBox">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="searchField" type="search" placeholder="Search city...">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+                <div id="autoComplete">
+                    <ul class="autoCompleteUL"></ul>
+                </div>
+            </div>
+            <div id="currentLocation">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <span>Current Location</span>
+            </div>
+        </header>
+         
+
+
+
+        <!-- 
+            - section
+        -->
+        <section>
+            <!-- 
+            - upper section
+            -->
+            <div id="upperSection">
+                <div id="upperInnerSection">
+                    <div class="currentWeather">
+                        <img class="currentWeatherImg" src="/assets/weather_icons/02d.png" alt="">
+                        <div class="currentDegree">
+                            <span class="degree">21°</span>
+                            <span class="weatherType">Mostly Sunny</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="current-stats">
+                        <div class="current-stats-upper">
+                            <div class="current-stats-inner">
+                                <span class="current-stats-max">23°</span>
+                                <span class="current-stats-inner-text">High</span>
+                            </div>
+                            <div class="current-stats-inner">
+                                <span class="current-stats-min">14°</span>
+                                <span class="current-stats-inner-text">Low</span>
+                            </div>
+                        </div>
+                        <div class="current-stats-upper">
+                            <div class="current-stats-inner">
+                                <span class="current-stats-rain">0%</span>
+                                <span class="current-stats-inner-text">Rain</span>
+                            </div>
+                            <div class="current-stats-inner">
+                                <span class="current-stats-feelsLike">23°</span>
+                                <span class="current-stats-inner-text">Feels Like</span>
+                            </div>
+                        </div>
+                        <div class="current-stats-upper">
+                            <div class="current-stats-inner">
+                                <span class="current-stats-sunrise">05:27</span>
+                                <span class="current-stats-inner-text">Sunrise</span>
+                            </div>
+                            <div class="current-stats-inner">
+                                <span class="current-stats-sunset">20:57</span>
+                                <span class="current-stats-inner-text">Sunset</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 
+            - middle section
+            -->
+            <div id="middleSection">
+                <div id="middleInnerSection">
+                    <span class="middleTitle">Today's weather</span>
+                    <div class="middleCards">
+                        <div class="hourCard">
+                            <span class="hourCard_Time">3am</span>
+                            <img class="hourCard_Img" src="/assets/weather_icons/10d.png" alt="">
+                            <span class="hourCard_Temp">14°</span>
+                        </div>
+                        <div class="hourCard">
+                            <span class="hourCard_Time">3am</span>
+                            <img class="hourCard_Img" src="/assets/weather_icons/10d.png" alt="">
+                            <span class="hourCard_Temp">14°</span>
+                        </div>
+                        <div class="hourCard">
+                            <span class="hourCard_Time">3am</span>
+                            <img class="hourCard_Img" src="/assets/weather_icons/10d.png" alt="">
+                            <span class="hourCard_Temp">14°</span>
+                        </div>
+                        <div class="hourCard">
+                            <span class="hourCard_Time">3am</span>
+                            <img class="hourCard_Img" src="/assets/weather_icons/10d.png" alt="">
+                            <span class="hourCard_Temp">14°</span>
+                        </div>
+                        <div class="hourCard">
+                            <span class="hourCard_Time">3am</span>
+                            <img class="hourCard_Img" src="/assets/weather_icons/10d.png" alt="">
+                            <span class="hourCard_Temp">14°</span>
+                        </div>
+                        <div class="hourCard">
+                            <span class="hourCard_Time">3am</span>
+                            <img class="hourCard_Img" src="/assets/weather_icons/10d.png" alt="">
+                            <span class="hourCard_Temp">14°</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 
+                - bottom section
+            -->
+            <div id="bottomSection">
+                <div id="bottomInnerSection">
+                    <span class="bottomTitle">Next 5 days</span>
+                    <div class="dayCard">
+                        <div class="dayCardSpan">
+                            <span class="dayCard_day">Tue</span>
+                            <span class="dayCard_date bottom-inner-text">30/7</span>
+                        </div>
+                        <div>
+                            <img class="dayCard_Img" src="/assets/weather_icons/02d.png" alt="">
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_maxTemp">21°</span>
+                            <span class="bottom-inner-text">High</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_minTemp">10°</span>
+                            <span class="bottom-inner-text">Low</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_rain">0%</span>
+                            <span class="bottom-inner-text">Rain</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_wind">12mph</span>
+                            <span class="bottom-inner-text">Wind</span>
+                        </div>
+                    </div>
+                    <div class="dayCard">
+                        <div class="dayCardSpan">
+                            <span class="dayCard_day">Tue</span>
+                            <span class="dayCard_date bottom-inner-text">30/7</span>
+                        </div>
+                        <div>
+                            <img class="dayCard_Img" src="/assets/weather_icons/02d.png" alt="">
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_maxTemp">10°</span>
+                            <span class="bottom-inner-text">High</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_minTemp">21°</span>
+                            <span class="bottom-inner-text">Low</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_rain">0%</span>
+                            <span class="bottom-inner-text">Rain</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_wind">12mph</span>
+                            <span class="bottom-inner-text">Wind</span>
+                        </div>
+                    </div>
+                    <div class="dayCard">
+                        <div class="dayCardSpan">
+                            <span class="dayCard_day">Tue</span>
+                            <span class="dayCard_date bottom-inner-text">30/7</span>
+                        </div>
+                        <div>
+                            <img class="dayCard_Img" src="/assets/weather_icons/02d.png" alt="">
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_maxTemp">10°</span>
+                            <span class="bottom-inner-text">High</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_minTemp">21°</span>
+                            <span class="bottom-inner-text">Low</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_rain">0%</span>
+                            <span class="bottom-inner-text">Rain</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_wind">12mph</span>
+                            <span class="bottom-inner-text">Wind</span>
+                        </div>
+                    </div>
+                    <div class="dayCard">
+                        <div class="dayCardSpan">
+                            <span class="dayCard_day">Tue</span>
+                            <span class="dayCard_date bottom-inner-text">30/7</span>
+                        </div>
+                        <div>
+                            <img class="dayCard_Img" src="/assets/weather_icons/02d.png" alt="">
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_maxTemp">10°</span>
+                            <span class="bottom-inner-text">High</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_minTemp">21°</span>
+                            <span class="bottom-inner-text">Low</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_rain">0%</span>
+                            <span class="bottom-inner-text">Rain</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_wind">12mph</span>
+                            <span class="bottom-inner-text">Wind</span>
+                        </div>
+                    </div>
+                    <div class="dayCard">
+                        <div class="dayCardSpan">
+                            <span class="dayCard_day">Tue</span>
+                            <span class="dayCard_date bottom-inner-text">30/7</span>
+                        </div>
+                        <div>
+                            <img class="dayCard_Img" src="/assets/weather_icons/02d.png" alt="">
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_maxTemp">10°</span>
+                            <span class="bottom-inner-text">High</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_minTemp">21°</span>
+                            <span class="bottom-inner-text">Low</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_rain">0%</span>
+                            <span class="bottom-inner-text">Rain</span>
+                        </div>
+                        <div class="dayCardSpan">
+                            <span class="dayCard_wind">12mph</span>
+                            <span class="bottom-inner-text">Wind</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- 
+        - js files
+    -->
+    <script src="/assets/js/app.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+
+</body>
+
+</html>

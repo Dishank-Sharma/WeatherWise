@@ -1,0 +1,540 @@
+* {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 500;
+    margin: 0%;
+    padding: 0%;
+    cursor: context-menu;
+}
+
+body {
+    background-color: #121212;
+    color: white;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.534);
+    border-radius: 10px;
+}
+
+
+/* ---------------------------- 
+            Header
+-------------------------------*/
+
+header {
+    display: flex;
+    height: 5em;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: sticky;
+    top: 0;
+    background: #121212;
+    z-index: 3;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+header #location {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+header #location .city {
+    font-size: 2rem;
+}
+
+header #location .date {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+
+header #searchBox {
+    position: relative;
+    background-color: hsl(0deg 2.73% 7.05%);
+    z-index: 4;
+    border-radius: 20px;
+}
+
+header #searchBox .searchField {
+    appearance: none;
+    border: 0px;
+    background: hsla(0, 0%, 100%, 0.04);
+    color: white;
+    height: 2.4rem;
+    width: 30vw;
+    min-width: 13rem;
+    border-radius: 20px;
+    padding-left: 2.7rem;
+    z-index: 5;
+}
+
+header #searchBox .fa-magnifying-glass {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 16px;
+    transition: 1s;
+}
+
+header #searchBox .fa-circle-chevron-right {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 20px;
+    transition: 0.3s;
+    color: transparent;
+    cursor: pointer;
+}
+
+header #searchBox .searchField:focus+.fa-circle-chevron-right {
+    color: white;
+}
+
+header #searchBox .searchField:focus {
+    outline: none;
+    background-color: hsla(0, 0%, 100%, 0.04);
+    transition: 0.3s ease;
+
+}
+
+header #searchBox .searchField::-webkit-search-cancel-button {
+    display: none;
+}
+
+#autoComplete {
+    position: absolute;
+    box-shadow: 0 4px 8px -3px #000;
+    background: hsl(0deg 1.24% 10.78%);
+    border-radius: 0 0 20px 20px;
+}
+
+#autoComplete .autoCompleteUL {
+    list-style-type: none
+}
+
+#autoComplete .autoCompleteUL li {
+    display: flex;
+    align-items: center;
+    right: 10px;
+    width: 30vw;
+    height: 4rem;
+    /* margin-left: 10px; */
+}
+
+#autoComplete .autoCompleteUL li:hover {
+    background-color: #2e2d2d;
+    border-radius: 0 0 20px 20px;
+}
+
+#autoComplete .autoCompleteUL img {
+    width: 1.5rem;
+    margin: 0 10px;
+}
+
+#autoComplete .autoCompleteUL div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sizer {
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+
+header #currentLocation {
+    display: flex;
+    background: rgb(166, 99, 254);
+    color: white;
+    border-radius: 40px;
+    height: 2.3rem;
+    width: 10rem;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 0.9rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+header #currentLocation span {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ---------------------------- 
+            Section
+-------------------------------*/
+section {
+    transition: 1.2s ease-in-out;
+    transform: translateX(-100%);
+}
+
+/* ---------------------------- 
+            Upper Section
+-------------------------------*/
+#upperSection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.3rem;
+}
+
+#upperInnerSection {
+    display: flex;
+    background-color: hsla(0, 0%, 100%, 0.04);
+    border-radius: 20px;
+    width: 95vw;
+    max-width: 55rem;
+    height: 15rem;
+    align-items: center;
+}
+
+#upperInnerSection .currentWeather {
+    display: flex;
+    align-items: center;
+    width: 27rem;
+    justify-content: space-evenly;
+}
+
+#upperInnerSection .currentWeather img {
+    width: 9rem;
+}
+
+#upperInnerSection .currentDegree {
+    display: flex;
+    flex-direction: column;
+}
+
+#upperInnerSection .currentDegree .degree {
+    height: 6.8rem;
+    font-size: 6rem;
+}
+
+#upperInnerSection .currentDegree .weatherType {
+    opacity: 0.7;
+}
+
+
+.current-stats {
+    display: flex;
+    align-items: center;
+    width: 27rem;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.current-stats .current-stats-upper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.current-stats .current-stats-upper .current-stats-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.current-stats .current-stats-upper .current-stats-inner .current-stats-inner-text {
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+hr {
+    height: 11rem;
+}
+
+/* ---------------------------- 
+            Middle Section
+-------------------------------*/
+
+#middleSection {
+    display: flex;
+    justify-content: center;
+}
+
+#middleInnerSection {
+    display: flex;
+    width: 95vw;
+    max-width: 55rem;
+    font-size: 1.3rem;
+    flex-direction: column;
+    margin-bottom: 15px;
+
+}
+
+#middleInnerSection .middleTitle {
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+#middleInnerSection .middleCards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.middleCards .hourCard {
+    display: flex;
+    width: 120px;
+    height: 156px;
+    background-color: hsla(0, 0%, 100%, 0.04);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.middleCards .hourCard img {
+    width: 3rem;
+}
+
+/* ---------------------------- 
+            Middle Section
+-------------------------------*/
+
+#bottomSection {
+    display: flex;
+    justify-content: center;
+}
+
+#bottomInnerSection {
+    display: flex;
+    width: 95vw;
+    max-width: 55rem;
+    font-size: 1.3rem;
+    flex-direction: column;
+
+}
+
+#bottomInnerSection .bottomTitle {
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+#bottomInnerSection .dayCard {
+    display: flex;
+    max-width: 880px;
+    height: 84.5px;
+    background-color: hsla(0, 0%, 100%, 0.04);
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-bottom: 14px;
+}
+
+#bottomInnerSection .dayCard img {
+    width: 3rem;
+}
+
+#bottomInnerSection .dayCard .dayCardSpan {
+    display: flex;
+    flex-direction: column;
+}
+
+#bottomInnerSection .dayCard .bottom-inner-text {
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+#starter_page {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 2;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 1s ease-in-out;
+}
+
+#starter_page span {
+    font-size: 5vw;
+}
+
+#starter_page i {
+    font-size: 7vw;
+    margin: 20px 0;
+}
+
+/* ---------------------------- 
+            Media Query
+-------------------------------*/
+
+@media screen and (min-width: 1250px) {
+
+    #upperInnerSection,
+    #middleInnerSection,
+    #bottomInnerSection {
+        width: 150vw;
+        max-width: 60rem;
+    }
+
+    #bottomInnerSection .dayCard {
+        max-width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    #upperInnerSection {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #upperInnerSection .currentWeather {
+        width: 100%;
+    }
+
+    #upperInnerSection hr {
+        width: 75vw;
+        height: 0.3px;
+        background-color: white;
+        border: 0;
+        margin: 20px 0;
+    }
+
+    #upperInnerSection .current-stats {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .current-stats .current-stats-upper .current-stats-inner {
+        margin-bottom: 15px;
+    }
+
+    /* 
+        - header
+    */
+    header {
+        position: relative;
+    }
+
+    header #location .city {
+        font-size: 1.5rem;
+    }
+
+    header #location .date {
+        font-size: 0.7rem;
+    }
+
+    header #searchBox {
+        position: absolute;
+        right: 5rem;
+    }
+
+    header #searchBox .searchField {
+        width: 0rem;
+        min-width: 0rem;
+        transition: 0.5s;
+    }
+
+    header #searchBox .fa-magnifying-glass {
+        z-index: -1;
+    }
+
+    header #searchBox .searchField:focus {
+        width: 15rem;
+
+    }
+
+    #autoComplete .autoCompleteUL li {
+        width: 15rem;
+
+    }
+
+    #autoComplete .autoCompleteUL li div {
+        font-size: 13px;
+    }
+
+    header #currentLocation {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50px;
+    }
+
+    header #currentLocation span {
+        display: none;
+    }
+
+    #starter_page span {
+        font-size: 7vw;
+    }
+
+    #starter_page i {
+        font-size: 9vw;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #middleInnerSection .middleCards {
+        overflow-x: auto;
+    }
+
+    #middleInnerSection .middleCards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .middleCards .hourCard {
+        min-width: 110px;
+        height: 140px;
+    }
+
+    #bottomInnerSection .dayCard {
+        margin-right: 0;
+    }
+
+    #bottomInnerSection {
+        font-size: 1.1rem;
+    }
+
+    #bottomInnerSection .dayCard .bottom-inner-text {
+        font-size: 0.8rem;
+    }
+
+    header #location,
+    header #currentLocation {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    header #searchBox .searchField:focus {
+        width: 15rem;
+
+    }
+
+    #autoComplete .autoCompleteUL li {
+        width: 15rem;
+    }
+
+    header #searchBox {
+        right: 4rem;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    header #location .city {
+        font-size: 1.3rem;
+    }
+
+    #bottomInnerSection .dayCard img {
+        width: 2.3rem;
+    }
+}
